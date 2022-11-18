@@ -3,9 +3,10 @@
 {% block header %}
 
 <meta name="go-import" content="{{page.extra.mod | safe}} {{page.extra.vcs | safe}} {{page.extra.git | safe}}">
-
+<meta http-equiv="refresh" content="0;URL='{{page.extra.git|safe}}'">
 {% endblock header %}
 
 {% block content %}
-{{ page.content | safe }}
+<p>Nothing to see here</p> 
+<p>Redirecting you to the <a href="{{page.extra.git | safe}}">{{page.extra.git|safe}}</a>...</p>
 {% endblock content %}
